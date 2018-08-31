@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import auth from '../Firebase';
+import {auth} from 'firebase';
 import * as routes from '../constants/routes';
-
-import * as routes from "../constants/routes";
 
 const SignUpPage = ({history}) => (
   <div>
@@ -38,7 +36,7 @@ class SignUpForm extends Component {
    passwordOne,
  } = this.state;
 
- const = {
+ const {
    history
  } = this.props;
 
@@ -99,7 +97,7 @@ class SignUpForm extends Component {
     </button>
 
     { error && <p>{error.message}</p> }
-    </form> />;
+    </form>
   }
 }
 
@@ -109,6 +107,5 @@ const SignUpLink = () => (
   </p>
 );
 
-export default SignUpPage;
 export default withRouter(SignUpPage);
 export { SignUpForm, SignUpLink };

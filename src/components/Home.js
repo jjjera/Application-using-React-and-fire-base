@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { compose } from 'recompose';
 
 import withAuthorization from "./withAuthorization";
-import { db } from "../firebase";
+import {db} from '../Firebase';
 
 class HomePage extends Component {
   constructor(props) {

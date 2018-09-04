@@ -6,21 +6,14 @@ import withAuthorization from "./withAuthorization";
 import {db} from '../Firebase';
 
 class HomePage extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      users: null
-    };
-  }
 
   componentDidMount() {
-    const { onSetUsers } = this.props;
+     const { onSetUsers } = this.props;
 
-    db.onceGetUsers().then(snapshot =>
-      onSetUsers(snapshot.val())
-    );
-  }
+     db.onceGetUsers().then(snapshot =>
+       onSetUsers(snapshot.val())
+     );
+   }
 
   render() {
    const { users } = this.props;
